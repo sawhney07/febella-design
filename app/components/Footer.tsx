@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin } from 'lucide-react'
 
 const navigation = [
   { name: 'HOME', href: '/' },
-  { name: 'ABOUT', href: '/about' },
+  { name: 'ABOUT US', href: '/about' },
   { name: 'PRODUCTS', href: '/products' },
   { name: 'CONTACT', href: '/contact' },
 ]
