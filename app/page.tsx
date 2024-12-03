@@ -24,12 +24,12 @@ const newsItems = [
   },
 ]
 
-const products = [
-  { name: 'PERSONAL STYLING', image: '/images/1.png' },
-  { name: 'WARDROBE CURATION', image: '/images/2.png' },
-  { name: 'IMAGE CONSULTING', image: '/images/3.png' },
-  { name: 'FASHION WORKSHOPS', image: '/images/4.png' },
-]
+// const products = [
+//   { name: 'PERSONAL STYLING', image: '/images/1.png' },
+//   { name: 'WARDROBE CURATION', image: '/images/2.png' },
+//   { name: 'IMAGE CONSULTING', image: '/images/3.png' },
+//   { name: 'FASHION WORKSHOPS', image: '/images/4.png' },
+// ]
 
 const steps = [
   { 
@@ -172,25 +172,25 @@ function WhatWeDoSection() {
   )
 }
 
-function ProductCard({ name, image }: { name: string; image: string }) {
-  return (
-    <motion.div
-      whileHover={{ y: -5 }}
-      transition={{ duration: 0.2 }}
-      className="group bg-[#E5DFD3] rounded-lg overflow-hidden shadow-md"
-    >
-      <div className="relative aspect-[3/4] mb-4">
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover"
-        />
-      </div>
-      <h3 className="text-lg tracking-[0.2em] text-center p-4 font-medium">{name}</h3>
-    </motion.div>
-  )
-}
+// function ProductCard({ name, image }: { name: string; image: string }) {
+//   return (
+//     <motion.div
+//       whileHover={{ y: -5 }}
+//       transition={{ duration: 0.2 }}
+//       className="group bg-[#E5DFD3] rounded-lg overflow-hidden shadow-md"
+//     >
+//       <div className="relative aspect-[3/4] mb-4">
+//         <Image
+//           src={image}
+//           alt={name}
+//           fill
+//           className="object-cover"
+//         />
+//       </div>
+//       <h3 className="text-lg tracking-[0.2em] text-center p-4 font-medium">{name}</h3>
+//     </motion.div>
+//   )
+// }
 
 function ProcessSection() {
   return (

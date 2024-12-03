@@ -4,26 +4,26 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Footer } from '../components/Footer'
 
-const teamMembers = [
-  {
-    name: 'Amit Sawhney',
-    role: 'Founder & CEO',
-    image: '/images/portfolio1.png',
-    description: 'With over 15 years of experience in fashion and styling, Sarah leads our creative vision and personalized styling approach.'
-  },
-  // {
-  //   name: 'Michael Chen',
-  //   role: 'Senior Style Consultant',
-  //   image: '/images/portfolio2.png',
-  //   description: 'Specializing in wardrobe curation and personal branding, Michael brings expertise in contemporary fashion trends.'
-  // },
-  // {
-  //   name: 'Emma Rodriguez',
-  //   role: 'Image Consultant',
-  //   image: '/images/portfolio3.png',
-  //   description: "Emma's background in professional image consulting helps clients develop their unique style identity."
-  // }
-]
+// const teamMembers = [
+//   {
+//     name: 'Amit Sawhney',
+//     role: 'Founder & CEO',
+//     image: '/images/portfolio1.png',
+//     description: 'With over 15 years of experience in fashion and styling, Sarah leads our creative vision and personalized styling approach.'
+//   },
+//   // {
+//   //   name: 'Michael Chen',
+//   //   role: 'Senior Style Consultant',
+//   //   image: '/images/portfolio2.png',
+//   //   description: 'Specializing in wardrobe curation and personal branding, Michael brings expertise in contemporary fashion trends.'
+//   // },
+//   // {
+//   //   name: 'Emma Rodriguez',
+//   //   role: 'Image Consultant',
+//   //   image: '/images/portfolio3.png',
+//   //   description: "Emma's background in professional image consulting helps clients develop their unique style identity."
+//   // }
+// ]
 
 const values = [
   {
