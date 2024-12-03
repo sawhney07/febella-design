@@ -143,31 +143,49 @@ function BookNowButton() {
 
 export default function Products() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F5F0E6] text-[#3C3A36]">
+    <div className="min-h-screen flex flex-col bg-[#F5F0E6] text-[#E5DFD3]">
       <main className="flex-grow">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="container mx-auto px-6 py-20"
+          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36] -mb-16" 
         >
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-semibold tracking-[0.2em] mb-4">OUR PRODUCTS</h1>
-            <p className="text-lg text-[#3C3A36]/80 max-w-2xl mx-auto">
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#E5DFD3]">
+              OUR PRODUCT RANGE
+            </h1>
+            <p className="text-lg md:text-xl text-[#E5DFD3]/80 max-w-3xl mx-auto leading-relaxed">
               Transform your style with our professional fashion services. Each service is tailored to meet your unique needs and preferences.
-            </p>
+            </p> 
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {products.map((product, index) => (
-              <ProductCard key={index} product={product} />
-            ))}
-          </div>
-
-          <CTASection />
+     </motion.div>
+             <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36]" 
+        >
+            <Image
+            src={'/images/products2.png'}
+            alt={"productlist"}
+            width={1000}
+            height={1000}
+            className="object-cover rounded-lg mb-20 mx-auto mt-2"
+          /> 
         </motion.div>
+ 
+        <div className="py-20">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {products.map((product, index) => (
+                <ProductCard key={index} product={product} />
+              ))}
+            </div>
+            <CTASection />
+          </div>
+        </div>
       </main>
-
       <Footer />
     </div>
   )

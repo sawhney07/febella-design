@@ -259,23 +259,27 @@ Date: ${new Date().toLocaleString()}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="container mx-auto px-6 py-20"
+          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#E5DFD3]"
         >
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl font-semibold tracking-[0.2em] mb-4">CONTACT US</h1>
-              <p className="text-lg text-[#3C3A36]/80 max-w-2xl mx-auto">
-                Begin your style journey with a personal consultation. We&apos;ll be in touch within 24 hours.
-              </p>
-            </div>
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36]">
+              CONTACT US
+            </h1>
+            <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto leading-relaxed">
+              Begin your style journey with a personal consultation. We&apos;ll be in touch within 24 hours.
+            </p>
+          </div>
+        </motion.div>
 
+        <div className="py-20">
+          <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
               {contactInfo.map((info, index) => (
                 <ContactCard key={index} info={info} />
               ))}
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-8 bg-[#E5DFD3] p-10 rounded-lg shadow-lg">
+            <form onSubmit={handleSubmit} className="space-y-8 bg-[#E5DFD3] p-10 rounded-lg shadow-lg max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <FormInput
                   label="NAME"
@@ -349,7 +353,7 @@ Date: ${new Date().toLocaleString()}
               </AnimatePresence>
             </form>
           </div>
-        </motion.div>
+        </div>
       </main>
 
       <Footer />

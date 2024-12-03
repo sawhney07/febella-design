@@ -28,7 +28,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     title: "SUMMER COLLECTION",
-    category: "Fashion Styling",
+    category: "APPAREL",
     description: "A vibrant summer collection featuring lightweight fabrics and bold colors, perfect for the modern woman.",
     image: "/images/portfolio1.png",
     client: "Fashion Magazine Editorial",
@@ -37,7 +37,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 2,
     title: "CORPORATE WARDROBE",
-    category: "Image Consulting",
+    category: "ACCESSORIES",
     description: "Executive wardrobe curation focusing on professional attire that commands presence and respect.",
     image: "/images/portfolio2.png",
     client: "Corporate Leadership Team",
@@ -46,7 +46,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 3,
     title: "WEDDING STYLING",
-    category: "Personal Styling",
+    category: "HOME TEXTILES",
     description: "Complete wedding party styling, including bride, bridesmaids, and mother of the bride outfits.",
     image: "/images/portfolio3.png",
     client: "Private Client",
@@ -54,31 +54,14 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 4,
-    title: "SEASONAL LOOKBOOK",
+    title: "HARD GOODS",
     category: "Fashion Styling",
     description: "Curated collection of seasonal trends and timeless pieces for versatile wardrobe options.",
     image: "/images/portfolio4.png",
     client: "Lifestyle Brand",
     date: "October 2023"
   },
-  {
-    id: 5,
-    title: "MINIMALIST COLLECTION",
-    category: "Personal Styling",
-    description: "Capsule wardrobe design focusing on essential pieces and neutral colors for maximum versatility.",
-    image: "/images/portfolio5.png",
-    client: "Style Workshop",
-    date: "November 2023"
-  },
-  {
-    id: 6,
-    title: "RED CARPET LOOKS",
-    category: "Image Consulting",
-    description: "Celebrity styling for major award shows and premieres, featuring custom designer pieces.",
-    image: "/images/portfolio6.png",
-    client: "Entertainment Industry",
-    date: "December 2023"
-  }
+
 ];
 
 const testimonials: Testimonial[] = [
@@ -215,22 +198,24 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen flex flex-col bg-[#F5F0E6] text-[#3C3A36]">
       <main className="flex-grow">
-        {/* Hero Section - now F5F0E6 */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="bg-[#F5F0E6] py-20"
+          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#E5DFD3]"
         >
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl font-semibold tracking-[0.2em] mb-4">PORTFOLIO</h1>
-              <p className="text-lg text-[#3C3A36]/80 max-w-2xl mx-auto">
-                Explore our collection of styling projects and fashion transformations.
-              </p>
-            </div>
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36]">
+              PORTFOLIO
+            </h1>
+            <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto leading-relaxed">
+              Explore our collection of styling projects and fashion transformations.
+            </p>
+          </div>
+        </motion.div>
 
-            {/* Category Filter */}
+        <div className="py-20">
+          <div className="container mx-auto px-6">
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
                 <motion.button
@@ -248,8 +233,6 @@ export default function Portfolio() {
                 </motion.button>
               ))}
             </div>
-
-            {/* Portfolio Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {filteredItems.map((item) => (
                 <PortfolioCard
@@ -260,7 +243,7 @@ export default function Portfolio() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* About Section - now #3C3A36 */}
         <section className="bg-[#3C3A36] py-32 text-[#F5F0E6]">

@@ -16,9 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-[#F5F0E6]">
         <Navigation />
-        <div className="pt-24">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   )

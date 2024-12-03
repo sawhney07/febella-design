@@ -7,19 +7,20 @@ import { Footer } from './components/Footer'
 
 const newsItems = [
   { 
-    title: 'Summer Collection Launch', 
-    date: 'June 15, 2024', 
-    description: 'Introducing our latest summer styles for the fashion-forward individual.' 
+    title: 'One-Stop Shop', 
+    description: 'We offer services at every stage of the production process, from design to delivery. Our expertise spans textiles, footwear, and home goods, with experience in managing multi-channel business requirements.' 
   },
   { 
-    title: 'Sustainable Fashion Workshop', 
-    date: 'July 1, 2024', 
-    description: 'Join us for an interactive session on incorporating sustainable practices into your wardrobe.' 
+    title: 'Sustainability and Responsibility',  
+    description: 'We prioritize respect for the environment across all levels of our business. With a strong quality management and compliance framework, we ensure ethical and sustainable practices.' 
   },
   { 
-    title: 'Collaboration with Local Artisans', 
-    date: 'July 10, 2024', 
-    description: 'Febella Design partners with local artisans to create unique, handcrafted accessories.' 
+    title: 'International Reach', 
+    description: 'Our network includes over 100 audited factories in India, capable of handling both large and small MOQs. This ensures flexibility and reliability for businesses of all sizes.' 
+  },
+  { 
+    title: 'Digital Solutions', 
+    description: 'Our virtual product platform streamlines operations, reducing costs and waste. This approach ensures efficiency while maintaining high-quality outcomes.' 
   },
 ]
 
@@ -34,22 +35,32 @@ const steps = [
   { 
     number: '01', 
     title: 'CONSULTATION', 
-    description: 'In-depth discussion to understand your style goals and preferences. We explore your lifestyle, aspirations, and current wardrobe challenges.' 
+    description: 'We begin by understanding your unique requirements and project goals. This stage ensures clear communication to align our services with your expectations.' 
   },
   { 
     number: '02', 
-    title: 'ANALYSIS', 
-    description: 'Comprehensive assessment of your current wardrobe and lifestyle needs. We evaluate colors, fits, and identify key pieces for your style evolution.' 
+    title: 'DEVELOPMENT', 
+    description: 'Our team designs and develops prototypes tailored to your specifications. This phase is crucial for refining concepts and finalizing production-ready designs.' 
   },
   { 
     number: '03', 
-    title: 'CURATION', 
-    description: 'Carefully selected pieces to enhance your personal style. We source unique items that align with your aesthetic and practical requirements.' 
+    title: 'ORDER PLACEMENT', 
+    description: 'Once the designs are approved, we streamline the process of placing orders with our trusted factories. We ensure clarity and precision in every detail for smooth production.' 
   },
   { 
     number: '04', 
-    title: 'STYLING', 
-    description: 'Expert guidance on how to wear and combine your new pieces. We create versatile looks and provide styling tips for various occasions.' 
+    title: 'MANUFACTURING', 
+    description: 'Production is carried out at our audited factories, adhering to high-quality standards. We manage timelines and ensure efficient handling of materials.' 
+  },
+  { 
+    number: '05', 
+    title: 'QA & QC', 
+    description: 'Quality assurance and control are integral to our process, ensuring products meet rigorous standards. Every item undergoes thorough inspections before moving to the next stage.' 
+  },
+  { 
+    number: '06', 
+    title: 'SHIPPING', 
+    description: 'Finished goods are packaged and shipped securely to their destination. We prioritize timely delivery and ensure all logistics are handled efficiently.' 
   },
 ]
 
@@ -68,10 +79,10 @@ function HomePage() {
   return (
     <>
       <HeroSection />
-      <ProductsSection />
+      <WhatWeDoSection />
       <ProcessSection />
       <VisionSection />
-      <LatestNewsSection />
+      <WhyPartnerWithUsSection />
       <FinalCTASection />
     </>
   )
@@ -83,24 +94,58 @@ function HeroSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="py-20 md:py-32 text-center bg-[#E5DFD3] relative overflow-hidden"
+      className="min-h-[90vh] flex items-center justify-center bg-[#E5DFD3] relative overflow-hidden"
     >
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[#3C3A36] rotate-45 transform origin-top-left"></div>
       </div>
-      <div className="container mx-auto px-6 relative z-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36]">
-          ELEVATE YOUR STYLE
-        </h1>
-        <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-2xl mx-auto leading-relaxed">
-          Bespoke fashion consulting and personal styling services tailored to your unique aesthetic.
-        </p>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.05, scale: 1 }}
+        transition={{ duration: 1.5, delay: 0.3 }}
+        className="absolute inset-0 flex items-center justify-center"
+      >
+        <div className="w-[150%] h-[150%] border-[50px] border-[#3C3A36] rounded-full" />
+      </motion.div>
+      <div className="container mx-auto px-6 relative z-10 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36]"
+        >
+          WHERE CREATIVITY MEETS FUNCTIONALITY
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-xl md:text-2xl text-[#3C3A36]/80 max-w-3xl mx-auto leading-relaxed"
+        >
+
+            Bespoke fashion consulting and personal styling services tailored to your unique aesthetic, 
+            Febella Design is your trusted partner in crafting innovative and sustainable design solutions for the modern world.
+
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-12"
+        >
+          <Link
+            href="/contact"
+            className="inline-block bg-[#3C3A36] text-[#F5F0E6] px-12 py-5 rounded-lg text-lg font-medium tracking-[0.2em] hover:bg-[#3C3A36]/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+          >
+            START YOUR JOURNEY
+          </Link>
+        </motion.div>
       </div>
     </motion.section>
   )
 }
 
-function ProductsSection() {
+function WhatWeDoSection() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -109,11 +154,18 @@ function ProductsSection() {
       className="py-20"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold tracking-[0.2em] text-center mb-12">OUR PRODUCTS</h2>
+        <h2 className="text-5xl font-semibold tracking-[0.2em] text-center mb-12">WHAT WE DO</h2>
+          <Image
+                src="/images/what_we_do.png"
+                alt="Febella Design Story"
+                width={1000}
+                height={1000}
+                className="object-cover rounded-lg mx-auto my-auto"
+              />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product, index) => (
+          {/* {products.map((product, index) => (
             <ProductCard key={index} {...product} />
-          ))}
+          ))} */}
         </div>
       </div>
     </motion.section>
@@ -149,12 +201,16 @@ function ProcessSection() {
       className="py-32 bg-[#E5DFD3]"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold tracking-[0.2em] text-center mb-16 text-[#3C3A36]">OUR PROCESS</h2>
-        <p className="text-center text-lg text-[#3C3A36]/80 max-w-3xl mx-auto mb-16">
-          Our comprehensive styling process is designed to transform your wardrobe and elevate your personal style. 
-          Each step is carefully crafted to ensure we understand and achieve your fashion goals.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="text-5xl font-semibold tracking-[0.2em] text-center mb-12 -mt-10 text-[#3C3A36]">FROM IDEAS TO REALITY</h2>
+        <Image
+                src="/images/process.png"
+                alt="Febella Design Story"
+                width={1200}
+                height={1000}
+                className="object-cover rounded-lg mx-auto my-auto mb-20"
+          />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-x-16 gap-y-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -179,10 +235,17 @@ function VisionSection() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.6 }}
-      className="py-32 text-center bg-[#3C3A36] text-[#F5F0E6]"
+      className="py-32 text-center bg-[#3f444e] text-[#F5F0E6]"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold tracking-[0.2em] mb-8">OUR VISION</h2>
+        <h2 className="text-3xl font-semibold tracking-[0.2em] mb-8">OUR PRODUCT GROUPS</h2>
+                <Image
+                src="/images/test.png"
+                alt="Febella Design Story"
+                width={1000}
+                height={800}
+                className="object-cover rounded-lg mx-auto my-auto mb-20"
+          />
         <div className="max-w-4xl mx-auto space-y-8">
           <p className="text-xl text-[#F5F0E6]/90 leading-relaxed">
             At Febella Design, we envision a world where every individual feels confident and empowered through their personal style. 
@@ -192,17 +255,13 @@ function VisionSection() {
             We believe that style is more than just clothing &ndash; it&apos;s a powerful form of self-expression and confidence. 
             Through our expert guidance and personalized approach, we help our clients discover and embrace their authentic style.
           </p>
-          <p className="text-lg text-[#F5F0E6]/80 leading-relaxed">
-            Our commitment extends beyond fashion trends to creating lasting, sustainable wardrobes that reflect both personal taste and lifestyle needs. 
-            We strive to make high-end fashion accessible and practical for everyday life.
-          </p>
         </div>
       </div>
     </motion.section>
   )
 }
 
-function LatestNewsSection() {
+function WhyPartnerWithUsSection() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -211,8 +270,8 @@ function LatestNewsSection() {
       className="py-20"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold tracking-[0.2em] text-center mb-12 text-[#3C3A36]">LATEST NEWS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 className="text-3xl font-semibold tracking-[0.2em] text-center mb-12 text-[#3C3A36]">WHY PARTNER WITH US?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {newsItems.map((item, index) => (
             <motion.div
               key={index}
@@ -221,11 +280,17 @@ function LatestNewsSection() {
               className="bg-[#E5DFD3] rounded-lg overflow-hidden shadow-md p-6"
             >
               <h3 className="text-xl tracking-[0.1em] mb-2 font-medium text-[#3C3A36]">{item.title}</h3>
-              <p className="text-sm text-[#3C3A36]/70 mb-4">{item.date}</p>
               <p className="text-[#3C3A36]/80">{item.description}</p>
             </motion.div>
           ))}
         </div>
+        <Image
+                src="/images/eco-friendly.png"
+                alt="Febella Design Story"
+                width={1200}
+                height={1000}
+                className="object-cover rounded-lg mx-auto mt-20"
+              />
       </div>
     </motion.section>
   )
