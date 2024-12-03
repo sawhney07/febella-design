@@ -32,11 +32,11 @@ export default function Navigation() {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 mt-auto transition-all duration-300 ${
           hasScrolled ? 'bg-[#F5F0E6] shadow-md' : 'bg-transparent'
         }`}
       >
-        <nav className="container mx-auto px-6 py-6 text-[#3C3A36]">
+        <nav className="container mx-auto px-6 mt-auto py-6 text-[#3C3A36]">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-4">
               <Image
@@ -77,7 +77,7 @@ export default function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-[#F5F0E6] fixed top-[96px] left-0 right-0 z-40 shadow-md"
+            className="md:hidden bg-[#F5F0E6] fixed top-[96px] left-0 right-0 z-40 shadow-md mt-auto"
           >
             <nav className="container mx-auto px-6 py-4">
               {navigation.map((item) => (
