@@ -3,7 +3,7 @@
 import { useState, ChangeEvent, FormEvent, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Footer } from '../components/Footer'
-import { Mail, Phone, MapPin, Clock } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
 interface FormData {
   name: string;
@@ -136,20 +136,15 @@ export default function Contact() {
     {
       icon: <Phone className="w-5 h-5" />,
       title: "PHONE",
-      content: "(555) 123-4567",
-      link: "tel:+15551234567"
+      content: "+91 7011316583 ,9560202525",
+      link: "tel:+917011316583"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       title: "LOCATION",
-      content: "123 Fashion Avenue, NY",
+      content: "Naraina Vihar, New Delhi, India",
       link: "https://maps.google.com/?q=123+Fashion+Avenue+New+York"
     },
-    {
-      icon: <Clock className="w-5 h-5" />,
-      title: "HOURS",
-      content: "Mon-Fri: 9AM-6PM EST"
-    }
   ];
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -271,9 +266,9 @@ Date: ${new Date().toLocaleString()}
           </div>
         </motion.div>
 
-        <div className="py-20">
+        <div className="py-10">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
               {contactInfo.map((info, index) => (
                 <ContactCard key={index} info={info} />
               ))}

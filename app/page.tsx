@@ -112,7 +112,7 @@ function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36]"
+          className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36] mt-16"
         >
           WHERE CREATIVITY MEETS FUNCTIONALITY
         </motion.h1>
