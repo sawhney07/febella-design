@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Footer } from '../components/Footer'
+import Link from 'next/link'
 
 // const teamMembers = [
 //   {
@@ -164,7 +165,8 @@ function ValuesSection() {
 
 function TeamSection() {
  return (
-    <motion.section
+  <>
+  <motion.section
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
@@ -179,7 +181,7 @@ function TeamSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px]">
               <Image
-                src="/images/portfolio4.png"
+                src="/images/management.png"
                 alt="Febella Design Story"
                 fill
                 className="object-cover rounded-lg -mt-1"
@@ -214,9 +216,51 @@ function TeamSection() {
                 life with efficiency and precision.
               </p>
             </div>
+            
           </div>
         </div>
+        
       </div>
+      
     </motion.section>
+    <div>
+      <section className="bg-[#3C3A36] py-32 text-[#F5F0E6]">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <div className="relative aspect-[3/4] bg-[#F5F0E6] rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/portfolio7.png"
+                  alt="Fashion Styling Process"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-6">
+                <h2 className="text-3xl font-semibold tracking-[0.2em]">OUR APPROACH</h2>
+                <p className="text-lg text-[#F5F0E6]/80 leading-relaxed">
+                  We believe that style is a powerful form of self-expression. Our portfolio showcases how we help clients discover and enhance their unique personal style through careful curation and expert guidance.
+                </p>
+                <p className="text-lg text-[#F5F0E6]/80 leading-relaxed">
+                  Each project is a collaborative journey, where we combine our expertise with your individual preferences to create looks that not only look exceptional but feel authentically you.
+                </p>
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  whileTap={{ y: 0 }}
+                >
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-[#F5F0E6] text-[#3C3A36] px-8 py-4 rounded-lg text-lg font-medium tracking-[0.2em] hover:bg-[#F5F0E6]/90 transition-colors duration-300 shadow-md"
+                  >
+                    START YOUR JOURNEY
+                  </Link>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+  </>
+    
+    
   )
 } 

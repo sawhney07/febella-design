@@ -143,7 +143,7 @@ export default function Contact() {
       icon: <MapPin className="w-5 h-5" />,
       title: "LOCATION",
       content: "Naraina Vihar, New Delhi, India",
-      link: "https://maps.google.com/?q=123+Fashion+Avenue+New+York"
+      link: "https://maps.app.goo.gl/1HNnWQQL5Ygt5pc79"
     },
   ];
 

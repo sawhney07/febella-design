@@ -201,7 +201,7 @@ function ProcessSection() {
       className="py-32 bg-[#E5DFD3]"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl font-semibold tracking-[0.2em] text-center mb-12 -mt-10 text-[#3C3A36]">FROM IDEAS TO REALITY</h2>
+        <h2 className="text-3xl lg:text-4xl font-semibold tracking-[0.2em] text-center mb-12 -mt-10 text-[#3C3A36]">FROM IDEAS TO REALITY</h2>
         <Image
                 src="/images/process.png"
                 alt="Febella Design Story"

@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+import { Facebook, Instagram, Linkedin } from 'lucide-react'
 
 const navigation = [
   { name: 'HOME', href: '/' },
-  { name: 'PORTFOLIO', href: '/portfolio' },
+  { name: 'ABOUT', href: '/about' },
   { name: 'PRODUCTS', href: '/products' },
   { name: 'CONTACT', href: '/contact' },
 ]
@@ -40,22 +40,22 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold tracking-[0.2em] mb-4">CONTACT</h3>
-            <p className="text-sm mb-2">123 Fashion Avenue, Style District</p>
-            <p className="text-sm mb-2">New York, NY 10001</p>
-            <p className="text-sm mb-2">Phone: (555) 123-4567</p>
+            <p className="text-sm mb-2">Naraina Vihar</p>
+            <p className="text-sm mb-2">New Delhi, India 110028</p>
+            <p className="text-sm mb-2">Phone: +91 7011316583 ,+91 9560202525</p>
             <p className="text-sm">Email: info@febelladesign.com</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold tracking-[0.2em] mb-4">FOLLOW US</h3>
             <div className="flex space-x-4">
+              <a href="https://www.linkedin.com/company/febelladesign/" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
+                <Linkedin size={24} />
+              </a>
               <a href="#" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
                 <Facebook size={24} />
               </a>
               <a href="#" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
                 <Instagram size={24} />
-              </a>
-              <a href="#" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
-                <Twitter size={24} />
               </a>
             </div>
           </div>
