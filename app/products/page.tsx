@@ -21,29 +21,29 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "SUMMER COLLECTION",
+    title: "JACKETS",
     category: "APPAREL",
     description: "A vibrant summer collection featuring lightweight fabrics and bold colors, perfect for the modern woman.",
     image: "/images/portfolio1.png",
   },
   {
     id: 2,
-    title: "CORPORATE WARDROBE",
-    category: "ACCESSORIES",
+    title: "BLOUSES",
+    category: "APPAREL",
     description: "Executive wardrobe curation focusing on professional attire that commands presence and respect.",
     image: "/images/portfolio2.png",
   },
   {
     id: 3,
-    title: "WEDDING STYLING",
+    title: "BEDDING",
     category: "HOME TEXTILES",
     description: "Complete wedding party styling, including bride, bridesmaids, and mother of the bride outfits.",
     image: "/images/portfolio3.png",
   },
   {
     id: 4,
-    title: "HARD GOODS",
-    category: "Fashion Styling",
+    title: "DECORATIVES",
+    category: "HARD GOODS",
     description: "Curated collection of seasonal trends and timeless pieces for versatile wardrobe options.",
     image: "/images/portfolio4.png",
   },
@@ -73,9 +73,135 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 9,
-    title: "FOOTWEAR",
-    category: "SHOES",
+    title: "SHOES",
+    category: "FOOTWEAR",
     image: "/images/portfolio4.png",
+  },
+  {
+    id: 10,
+    title: "CARPETS",
+    category: "HOME TEXTILES",
+    image: "/images/portfolio4.png",
+  },
+    {
+    id: 11,
+    title: "CUSHIONS",
+    category: "HOME TEXTILES",
+    image: "/images/portfolio4.png",
+  },
+    {
+    id: 12,
+    title: "BATH MATS",
+    category: "HOME TEXTILES",
+    image: "/images/portfolio4.png",
+  },
+    {
+    id: 13,
+    title: "TOWELS",
+    category: "HOME TEXTILES",
+    image: "/images/portfolio4.png",
+  },
+    {
+    id: 14,
+    title: "CURTAINS",
+    category: "HOME TEXTILES",
+    image: "/images/portfolio4.png",
+  },
+    {
+    id: 15,
+    title: "FURNITURE",
+    category: "HARD GOODS",
+    image: "/images/portfolio4.png",
+  },
+      {
+    id: 16,
+    title: "LIGHTINGS",
+    category: "HARD GOODS",
+    image: "/images/portfolio4.png",
+  },
+      {
+    id: 17,
+    title: "GARDEN DECOR",
+    category: "HARD GOODS",
+    image: "/images/portfolio4.png",
+  },
+      {
+    id: 18,
+    title: "OUTDOOR FURNITURE",
+    category: "HARD GOODS",
+    image: "/images/portfolio4.png",
+  },
+    {
+    id: 19,
+    title: "T-SHIRTS/ SHIRTS",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+      {
+    id: 20,
+    title: "DRESSES",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 21,
+    title: "UNDERWEAR",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 22,
+    title: "SKIRTS",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 23,
+    title: "BEACHWEAR",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 24,
+    title: "SHORTS",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 25,
+    title: "EVENING WEAR",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 26,
+    title: "PANTS / TROUSERS",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 27,
+    title: "JEANS",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 28,
+    title: "NIGHTWEAR",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 29,
+    title: "LEATHER WEAR",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
+  },
+        {
+    id: 30,
+    title: "SWEATERS",
+    category: "APPAREL",
+    image: "/images/portfolio1.png",
   },
 
 ];
@@ -150,7 +276,7 @@ function PortfolioCard({ item, onClick }: { item: PortfolioItem; onClick: () => 
         <span className="text-sm font-medium text-[#3C3A36]/60 tracking-[0.2em]">
           {item.category}
         </span>
-        <h3 className="text-xl font-semibold tracking-[0.2em] mt-2">
+        <h3 className="text-l font-semibold tracking-[0.2em] mt-2">
           {item.title}
         </h3>
       </div>
@@ -193,7 +319,7 @@ function Portfolio() {
                 </motion.button>
               ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-24">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto mb-24">
               {filteredItems.map((item) => (
                 <PortfolioCard
                   key={item.id}
