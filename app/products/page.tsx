@@ -218,7 +218,7 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 2,
-    category: "WOMENSWEAR",
+    category: "WOMENS' WEAR",
     image: "/images/womenswear1.png",
   },
   {
@@ -252,22 +252,22 @@ const categories = [...Array.from(new Set(portfolioItems.map(item => item.catego
 
 const categoryDetails = {
   MENSWEAR: [
-    "Jackets", "T-shirts", "Shirts", "Jeans", "Trousers", "Leatherwear", "Sweaters", "Nightwear", "Shorts", "Pants"
+    "Jackets", "T-shirts", "Shirts", "Jeans", "Trousers", "Leather-wear", "Sweaters", "Nightwear", "Shorts", "Pants"
   ],
-  WOMENSWEAR: [
-    "Blouses", "Dresses", "Underwear", "Skirts", "Beachwear", "Eveningwear", "Nightwear", "Leatherwear", "Sweaters", "T-shirts"
+  "WOMENS' WEAR": [
+    "Blouses", "Dresses", "Underwear", "Skirts", "Beachwear", "Evening-wear", "Nightwear", "Leather-wear", "Sweaters", "T-shirts"
   ],
   HANDLOOMS: [
-    "Scarves", "Bedding", "Throws", "Towels", "Curtains", "Kitchen"
+    "Jackets", "Dresses", "Blouses"
   ],
-  KIDSSWEAR: [
+  KIDSWEAR: [
     "T-shirts", "Dresses", "Shorts", "Pants"
   ],
   ACCESSORIES: [
     "Scarves", "Jewelry", "Bags", "Belts"
   ],
   FOOTWEAR: [
-    "Sneakers", "Sandals", "Flip Flops", "flats", "Heels", "Boots"
+    "Sneakers", "Sandals", "Flip Flops", "Shoes", "Heels", "Boots"
   ],
   'HOME GOODS': [
     "Bedding", "Carpets", "Cushions", "Bath Mats", "Kitchen", "Towels", "Furniture", "Garden", "Lighting", "Outdoors"
