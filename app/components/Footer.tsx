@@ -47,7 +47,7 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold tracking-[0.2em] mb-4">FOLLOW US</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
               <a href="https://www.linkedin.com/company/febelladesign/" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
                 <Linkedin size={24} />
               </a>

@@ -254,7 +254,7 @@ const categoryDetails = {
   MENSWEAR: [
     "Jackets", "T-shirts", "Shirts", "Jeans", "Trousers", "Leather-wear", "Sweaters", "Nightwear", "Shorts", "Pants"
   ],
-  "WOMENS' WEAR": [
+  "WOMEN'S WEAR": [
     "Blouses", "Dresses", "Underwear", "Skirts", "Beachwear", "Evening-wear", "Nightwear", "Leather-wear", "Sweaters", "T-shirts"
   ],
   HANDLOOMS: [

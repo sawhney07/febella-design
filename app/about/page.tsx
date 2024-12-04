@@ -200,7 +200,7 @@ function TeamSection() {
               </h3>
 
               <p className="text-[#3C3A36]/80 leading-relaxed">
-                Amit has 30+ years experience in understanding the customer
+                Amit Sawhney has 30+ years experience in understanding the customer
                 requirements. His vision is to bridge the gap between high quality
                 garment production and the global demand for exceptional products.
               </p>
