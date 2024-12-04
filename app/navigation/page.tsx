@@ -46,7 +46,7 @@ export default function Navigation() {
                 height={48}
                 className="w-12 h-12"
               />
-              <span className="text-xl font-semibold tracking-[0.2em]">FEBELLA DESIGN</span>
+              <span className="text-l font-semibold tracking-[0.2em]">FEBELLA DESIGN</span>
             </Link>
             <div className="hidden md:flex space-x-8">
               {navigation.map((item) => (
