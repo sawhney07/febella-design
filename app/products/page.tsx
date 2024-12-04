@@ -228,7 +228,7 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 4,
-    category: "KIDSSWEAR",
+    category: "KIDSWEAR",
     image: "/images/kidswear1.png",
   },
   {
@@ -252,9 +252,9 @@ const categories = [...Array.from(new Set(portfolioItems.map(item => item.catego
 
 const categoryDetails = {
   MENSWEAR: [
-    "Jackets", "T-shirts", "Shirts", "Jeans", "Trousers", "Leather-wear", "Sweaters", "Nightwear", "Shorts", "Pants"
+    "Jackets", "T-shirts", "Shirts", "Jeans", "Trousers", "Leatherwear", "Sweaters", "Nightwear", "Shorts", "Pants"
   ],
-  "WOMEN'S WEAR": [
+  'WOMENS\' WEAR': [
     "Blouses", "Dresses", "Underwear", "Skirts", "Beachwear", "Evening-wear", "Nightwear", "Leather-wear", "Sweaters", "T-shirts"
   ],
   HANDLOOMS: [

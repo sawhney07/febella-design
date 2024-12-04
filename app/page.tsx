@@ -287,19 +287,19 @@ function WhyPartnerWithUsSection() {
         <h1 className="text-2xl lg:text-3xl font-medium tracking-[0.2em] text-center mt-16 -mb-4 text-[#3C3A36]">
           WE DELIVER LASTING BENEFITS TO BOTH BUSINESSES AND THE ENVIRONMENT THROUGH SUSTAINABLE SUPPLY CHAIN PRACTICES.
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-14 mt-16 lg:mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 mt-16 lg:mt-0">
           <motion.div
             key={1}
             whileHover={{ y: -5 }}
             transition={{ duration: 0.2 }}
-            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[225px] lg:mt-[75px]"
+            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[180px] lg:h-[220px] lg:mt-[75px]"
           >
             <Image
               src="/images/eco1.png"
               alt="Febella Design Story"
               width={600}
               height={400}
-              className="object-cover rounded-[40px] mx-auto" // Adjusted margin-top to bring the image up
+              className="object-cover rounded-[40px] mx-auto my-auto" // Adjusted margin-top to bring the image up
             />
           </motion.div>
           
@@ -307,7 +307,7 @@ function WhyPartnerWithUsSection() {
             key={2}
             whileHover={{ y: -5 }}
             transition={{ duration: 0.2 }}
-            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[210px] lg:mt-[90px]"
+            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[160px] lg:h-[210px] lg:mt-[90px]"
           >
             <Image
               src="/images/eco2.png"
@@ -322,7 +322,7 @@ function WhyPartnerWithUsSection() {
             key={3}
             whileHover={{ y: -5 }}
             transition={{ duration: 0.2 }}
-            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[200px] lg:mt-[95px]"
+            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[155px] lg:h-[200px] lg:mt-[95px]"
           >
             <Image
               src="/images/eco3.png"
