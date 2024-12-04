@@ -205,12 +205,12 @@ function ProcessSection() {
         <Image
                 src="/images/process.png"
                 alt="Febella Design Story"
-                width={1200}
-                height={1000}
+                width={1400}
+                height={1200}
                 className="object-cover rounded-lg mx-auto my-auto mb-20"
           />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-x-16 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-x-12 gap-y-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}

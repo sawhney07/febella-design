@@ -1,16 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { X } from 'lucide-react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer } from '../components/Footer'
 
 
+
 interface PortfolioItem {
   id: number;
-  title: string;
+  title?: string;
   category: string;
   description?: string;
   image: string;
@@ -18,276 +18,293 @@ interface PortfolioItem {
 }
 
 
+// const portfolioItems2: PortfolioItem[] = [
+//   {
+//     id: 1,
+//     title: "JACKETS",
+//     category: "APPAREL",
+//     description: "A vibrant summer collection featuring lightweight fabrics and bold colors, perfect for the modern woman.",
+//     image: "/images/portfolio1.png",
+//   },
+//   {
+//     id: 2,
+//     title: "BLOUSES",
+//     category: "APPAREL",
+//     description: "Executive wardrobe curation focusing on professional attire that commands presence and respect.",
+//     image: "/images/portfolio2.png",
+//   },
+//   {
+//     id: 3,
+//     title: "BEDDING",
+//     category: "HOME TEXTILES",
+//     description: "Complete wedding party styling, including bride, bridesmaids, and mother of the bride outfits.",
+//     image: "/images/portfolio3.png",
+//   },
+//   {
+//     id: 4,
+//     title: "DECORATIVES",
+//     category: "HARD GOODS",
+//     description: "Curated collection of seasonal trends and timeless pieces for versatile wardrobe options.",
+//     image: "/images/portfolio4.png",
+//   },
+//   {
+//     id: 5,
+//     title: "SCARVES",
+//     category: "ACCESSORIES",
+//     image: "/images/portfolio4.png",
+//   },
+//   {
+//     id: 6,
+//     title: "JEWELRY",
+//     category: "ACCESSORIES",
+//     image: "/images/portfolio4.png",
+//   },
+//   {
+//     id: 7,
+//     title: "BAGS",
+//     category: "ACCESSORIES",
+//     image: "/images/portfolio4.png",
+//   },
+//   {
+//     id: 8,
+//     title: "BELTS",
+//     category: "ACCESSORIES",
+//     image: "/images/portfolio4.png",
+//   },
+//   {
+//     id: 9,
+//     title: "SHOES",
+//     category: "FOOTWEAR",
+//     image: "/images/portfolio4.png",
+//   },
+//   {
+//     id: 10,
+//     title: "CARPETS",
+//     category: "HOME TEXTILES",
+//     image: "/images/portfolio4.png",
+//   },
+//     {
+//     id: 11,
+//     title: "CUSHIONS",
+//     category: "HOME TEXTILES",
+//     image: "/images/portfolio4.png",
+//   },
+//     {
+//     id: 12,
+//     title: "BATH MATS",
+//     category: "HOME TEXTILES",
+//     image: "/images/portfolio4.png",
+//   },
+//     {
+//     id: 13,
+//     title: "TOWELS",
+//     category: "HOME TEXTILES",
+//     image: "/images/portfolio4.png",
+//   },
+//     {
+//     id: 14,
+//     title: "CURTAINS",
+//     category: "HOME TEXTILES",
+//     image: "/images/portfolio4.png",
+//   },
+//     {
+//     id: 15,
+//     title: "FURNITURE",
+//     category: "HARD GOODS",
+//     image: "/images/portfolio4.png",
+//   },
+//       {
+//     id: 16,
+//     title: "LIGHTINGS",
+//     category: "HARD GOODS",
+//     image: "/images/portfolio4.png",
+//   },
+//       {
+//     id: 17,
+//     title: "GARDEN DECOR",
+//     category: "HARD GOODS",
+//     image: "/images/portfolio4.png",
+//   },
+//       {
+//     id: 18,
+//     title: "OUTDOOR FURNITURE",
+//     category: "HARD GOODS",
+//     image: "/images/portfolio4.png",
+//   },
+//     {
+//     id: 19,
+//     title: "T-SHIRTS/ SHIRTS",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//       {
+//     id: 20,
+//     title: "DRESSES",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 21,
+//     title: "UNDERWEAR",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 22,
+//     title: "SKIRTS",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 23,
+//     title: "BEACHWEAR",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 24,
+//     title: "SHORTS",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 25,
+//     title: "EVENING WEAR",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 26,
+//     title: "PANTS / TROUSERS",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 27,
+//     title: "JEANS",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 28,
+//     title: "NIGHTWEAR",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 29,
+//     title: "LEATHER WEAR",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//         {
+//     id: 30,
+//     title: "SWEATERS",
+//     category: "APPAREL",
+//     image: "/images/portfolio1.png",
+//   },
+//    {
+//     id: 31,
+//     category: "MENSWEAR",
+//     image: "/images/menswear1.png",
+//   },
+
+// ];
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "JACKETS",
-    category: "APPAREL",
-    description: "A vibrant summer collection featuring lightweight fabrics and bold colors, perfect for the modern woman.",
-    image: "/images/portfolio1.png",
+    category: "MENSWEAR",
+    image: "/images/menswear1.png",
   },
   {
     id: 2,
-    title: "BLOUSES",
-    category: "APPAREL",
-    description: "Executive wardrobe curation focusing on professional attire that commands presence and respect.",
-    image: "/images/portfolio2.png",
+    category: "WOMENSWEAR",
+    image: "/images/womenswear1.png",
   },
   {
     id: 3,
-    title: "BEDDING",
-    category: "HOME TEXTILES",
-    description: "Complete wedding party styling, including bride, bridesmaids, and mother of the bride outfits.",
-    image: "/images/portfolio3.png",
+    category: "HANDLOOMS",
+    image: "/images/handlooms1.png",
   },
   {
     id: 4,
-    title: "DECORATIVES",
-    category: "HARD GOODS",
-    description: "Curated collection of seasonal trends and timeless pieces for versatile wardrobe options.",
-    image: "/images/portfolio4.png",
+    category: "KIDSSWEAR",
+    image: "/images/kidswear1.png",
   },
   {
     id: 5,
-    title: "SCARVES",
     category: "ACCESSORIES",
-    image: "/images/portfolio4.png",
+    image: "/images/accessories1.png",
   },
   {
     id: 6,
-    title: "JEWELRY",
-    category: "ACCESSORIES",
-    image: "/images/portfolio4.png",
+    category: "FOOTWEAR",
+    image: "/images/footwear1.png",
   },
   {
     id: 7,
-    title: "BAGS",
-    category: "ACCESSORIES",
-    image: "/images/portfolio4.png",
+    category: "HOME GOODS",
+    image: "/images/homegoods1.png",
   },
-  {
-    id: 8,
-    title: "BELTS",
-    category: "ACCESSORIES",
-    image: "/images/portfolio4.png",
-  },
-  {
-    id: 9,
-    title: "SHOES",
-    category: "FOOTWEAR",
-    image: "/images/portfolio4.png",
-  },
-  {
-    id: 10,
-    title: "CARPETS",
-    category: "HOME TEXTILES",
-    image: "/images/portfolio4.png",
-  },
-    {
-    id: 11,
-    title: "CUSHIONS",
-    category: "HOME TEXTILES",
-    image: "/images/portfolio4.png",
-  },
-    {
-    id: 12,
-    title: "BATH MATS",
-    category: "HOME TEXTILES",
-    image: "/images/portfolio4.png",
-  },
-    {
-    id: 13,
-    title: "TOWELS",
-    category: "HOME TEXTILES",
-    image: "/images/portfolio4.png",
-  },
-    {
-    id: 14,
-    title: "CURTAINS",
-    category: "HOME TEXTILES",
-    image: "/images/portfolio4.png",
-  },
-    {
-    id: 15,
-    title: "FURNITURE",
-    category: "HARD GOODS",
-    image: "/images/portfolio4.png",
-  },
-      {
-    id: 16,
-    title: "LIGHTINGS",
-    category: "HARD GOODS",
-    image: "/images/portfolio4.png",
-  },
-      {
-    id: 17,
-    title: "GARDEN DECOR",
-    category: "HARD GOODS",
-    image: "/images/portfolio4.png",
-  },
-      {
-    id: 18,
-    title: "OUTDOOR FURNITURE",
-    category: "HARD GOODS",
-    image: "/images/portfolio4.png",
-  },
-    {
-    id: 19,
-    title: "T-SHIRTS/ SHIRTS",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-      {
-    id: 20,
-    title: "DRESSES",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 21,
-    title: "UNDERWEAR",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 22,
-    title: "SKIRTS",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 23,
-    title: "BEACHWEAR",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 24,
-    title: "SHORTS",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 25,
-    title: "EVENING WEAR",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 26,
-    title: "PANTS / TROUSERS",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 27,
-    title: "JEANS",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 28,
-    title: "NIGHTWEAR",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 29,
-    title: "LEATHER WEAR",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-        {
-    id: 30,
-    title: "SWEATERS",
-    category: "APPAREL",
-    image: "/images/portfolio1.png",
-  },
-
-];
+]
 
 const categories = [...Array.from(new Set(portfolioItems.map(item => item.category)))];
 
-function PortfolioModal({ item, onClose }: { item: PortfolioItem; onClose: () => void }) {
-  return (
-    <motion.div
-      layoutId={`portfolio-${item.id}`}
-      className="bg-[#F5F0E6] rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <div className="relative aspect-video">
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          className="object-cover"
-        />
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2 bg-[#F5F0E6] rounded-full shadow-lg"
-          aria-label="Close modal"
-        >
-          <X className="w-6 h-6" />
-        </button>
-      </div>
-      <div className="p-8">
-        <span className="text-sm font-medium text-[#3C3A36]/60 tracking-[0.2em]">
-          {item.category}
-        </span>
-        <h2 className="text-2xl font-semibold tracking-[0.2em] mt-2 mb-4">
-          {item.title}
-        </h2>
-        <p className="text-[#3C3A36]/80 mb-6 leading-relaxed">
-          {item.description}
-        </p>
-        <div className="grid grid-cols-2 gap-4 text-sm">
-          {item.client && (
-            <div>
-              <span className="font-medium tracking-[0.2em]">CLIENT</span>
-              <p className="text-[#3C3A36]/80 mt-1">{item.client}</p>
-            </div>
-          )}
-          <div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  )
+const categoryDetails = {
+  MENSWEAR: [
+    "Jackets", "T-shirts", "Shirts", "Jeans", "Trousers", "Leatherwear", "Sweaters", "Nightwear", "Shorts", "Pants"
+  ],
+  WOMENSWEAR: [
+    "Blouses", "Dresses", "Underwear", "Skirts", "Beachwear", "Eveningwear", "Nightwear", "Leatherwear", "Sweaters", "T-shirts"
+  ],
+  HANDLOOMS: [
+    "Scarves", "Bedding", "Throws", "Towels", "Curtains", "Kitchen"
+  ],
+  KIDSSWEAR: [
+    "T-shirts", "Dresses", "Shorts", "Pants"
+  ],
+  ACCESSORIES: [
+    "Scarves", "Jewelry", "Bags", "Belts"
+  ],
+  FOOTWEAR: [
+    "Sneakers", "Sandals", "Flip Flops", "flats", "Heels", "Boots"
+  ],
+  'HOME GOODS': [
+    "Bedding", "Carpets", "Cushions", "Bath Mats", "Kitchen", "Towels", "Furniture", "Garden", "Lighting", "Outdoors"
+  ]
 }
 
+function PortfolioCard({ item }: { item: PortfolioItem }) {
+  const itemsList = categoryDetails[item.category as keyof typeof categoryDetails];
 
-function PortfolioCard({ item, onClick }: { item: PortfolioItem; onClick: () => void }) {
   return (
-    <motion.div
-      layoutId={`portfolio-${item.id}`}
-      whileHover={{ y: -5 }}
-      onClick={onClick}
-      className="cursor-pointer bg-[#E5DFD3] rounded-lg overflow-hidden shadow-lg"
-    >
-      <div className="relative aspect-square">
+    <div className="mb-12 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+      {/* Image Section */}
+      <div className="w-full lg:w-2/3 mt-12 lg:mt-0 lg:pr-6">
         <Image
           src={item.image}
-          alt={item.title}
-          fill
-          className="object-cover"
+          alt={item.category}
+          width={1200}
+          height={800}
+          className="object-contain w-full max-h-[400px] md:max-h-[600px] lg:max-h-[700px] rounded-lg lg:mt-12"
         />
       </div>
-      <div className="p-6">
-        <span className="text-sm font-medium text-[#3C3A36]/60 tracking-[0.2em]">
-          {item.category}
-        </span>
-        <h3 className="text-l font-semibold tracking-[0.2em] mt-2">
-          {item.title}
-        </h3>
-      </div>
-    </motion.div>
-  )
-}
 
+      {/* Text Section */}
+      <div className="w-full lg:w-1/3 px-4 sm:px-6 lg:px-0 text-center lg:text-center mt-6 lg:mt-12">
+        <h3 className="text-xl lg:text-2xl font-semibold mb-4 text-[#3C3A36]">{item.category}</h3>
+        <ul className="space-y-4 text-[#3C3A36]">
+          {itemsList.map((item, index) => (
+            <li key={index} className="text-[#3C3A36] text-l lg:text-lg">{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
 
 function Portfolio() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState(portfolioItems[0].category);
 
   const filteredItems = selectedCategory === "All" 
     ? portfolioItems 
@@ -302,7 +319,6 @@ function Portfolio() {
               Explore our collection of styling projects and fashion transformations.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              
               {categories.map((category) => (
                 <motion.button
                   key={category}
@@ -319,74 +335,66 @@ function Portfolio() {
                 </motion.button>
               ))}
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto mb-24">
+            <div className="max-w-7xl my-auto mb-16 mx-auto -mt-12 items-center justify-center">
               {filteredItems.map((item) => (
                 <PortfolioCard
                   key={item.id}
                   item={item}
-                  onClick={() => setSelectedItem(item)}
                 />
               ))}
             </div>
           </div>
         </div>
 
-
-
-        {/* Final Vision Section - now #E5DFD3 */}
-        <section className="bg-[#E5DFD3] py-32">
+        {/* Final Vision Section */}
+        <section className="bg-[#E5DFD3] py-16 md:py-32">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-semibold tracking-[0.2em] mb-8 text-[#3C3A36]">
-                CRAFTING YOUR STYLE STORY
-              </h2>
-              <div className="space-y-8">
-                <p className="text-xl text-[#3C3A36]/90 leading-relaxed">
-                  Every portfolio piece represents a unique journey of style transformation. 
-                  We take pride in creating personalized experiences that reflect the individual essence of each client.
-                </p>
-                <p className="text-lg text-[#3C3A36]/80 leading-relaxed">
-                  Our commitment to excellence and attention to detail ensures that each styling project 
-                  not only meets but exceeds expectations, creating lasting confidence through personal style.
-                </p>
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  whileTap={{ y: 0 }}
-                  className="pt-4"
-                >      <p className="text-lg text-[#3C3A36]/80 mb-8">
-        Book a consultation today and begin your style journey with our expert team.
-      </p>
-                  <Link
-                    href="/contact"
-                    className="inline-block bg-[#3C3A36] text-[#F5F0E6] px-8 py-4 rounded-lg text-lg font-medium tracking-[0.2em] hover:bg-[#3C3A36]/90 transition-colors duration-300 shadow-md"
-                  >
-                    START YOUR JOURNEY
-                  </Link>
-                </motion.div>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+              <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+                <Image
+                  src="/images/crafting.png"
+                  alt="Crafting Your Style"
+                  width={800}
+                  height={600}
+                  className="object-contain w-3/4 max-h-[400px] md:max-h-[600px] lg:max-h-[700px] rounded-lg mx-auto lg:ml-48"
+                />
+              </div>
+              <div className="w-full lg:w-1/2 lg:pl-12 mx-auto">
+                <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+                  <h2 className="text-3xl font-semibold tracking-[0.2em] mb-8 text-[#3C3A36]">
+                    CRAFTING YOUR STYLE STORY
+                  </h2>
+                  <div className="space-y-8">
+                    <p className="text-xl text-[#3C3A36]/90 leading-relaxed">
+                      Every portfolio piece represents a unique journey of style transformation. 
+                      We take pride in creating personalized experiences that reflect the individual essence of each client.
+                    </p>
+                    <p className="text-lg text-[#3C3A36]/80 leading-relaxed">
+                      Our commitment to excellence and attention to detail ensures that each styling project 
+                      not only meets but exceeds expectations, creating lasting confidence through personal style.
+                    </p>
+                    <motion.div
+                      whileHover={{ y: -2 }}
+                      whileTap={{ y: 0 }}
+                      className="pt-4"
+                    >
+                      <p className="text-lg text-[#3C3A36]/80 mb-8">
+                        Book a consultation today and begin your style journey with our expert team.
+                      </p>
+                      <Link
+                        href="/contact"
+                        className="inline-block bg-[#3C3A36] text-[#F5F0E6] px-8 py-4 rounded-lg text-lg font-medium tracking-[0.2em] hover:bg-[#3C3A36]/90 transition-colors duration-300 shadow-md"
+                      >
+                        START YOUR JOURNEY
+                      </Link>
+                    </motion.div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Modal */}
-        <AnimatePresence>
-          {selectedItem && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
-              onClick={() => setSelectedItem(null)}
-            >
-              <PortfolioModal
-                item={selectedItem}
-                onClose={() => setSelectedItem(null)}
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
       </main>
-
     </div>
   )
 }
@@ -399,7 +407,7 @@ export default function Products() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36] -mb-16" 
+          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36] -mb-16"
         >
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#E5DFD3]">
@@ -407,24 +415,24 @@ export default function Products() {
             </h1>
             <p className="text-lg md:text-xl text-[#E5DFD3]/80 max-w-3xl mx-auto leading-relaxed">
               Transform your style with our professional fashion services. Each service is tailored to meet your unique needs and preferences.
-            </p> 
+            </p>
           </div>
-     </motion.div>
-             <motion.div
+        </motion.div>
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36]" 
+          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36]"
         >
-            <Image
+          <Image
             src={'/images/products2.png'}
             alt={"productlist"}
             width={1000}
             height={1000}
             className="object-cover rounded-lg mb-20 mx-auto mt-2"
-          /> 
+          />
         </motion.div>
- 
+
         <div className="py-20">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -435,7 +443,7 @@ export default function Products() {
           </div>
         </div>
       </main>
-      <Portfolio/>
+      <Portfolio />
       <Footer />
     </div>
   )
