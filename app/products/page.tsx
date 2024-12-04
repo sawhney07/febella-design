@@ -255,7 +255,7 @@ const categoryDetails = {
     "Jackets", "T-shirts", "Shirts", "Jeans", "Trousers", "Leatherwear", "Sweaters", "Nightwear", "Shorts", "Pants"
   ],
   'WOMENS\' WEAR': [
-    "Blouses", "Dresses", "Underwear", "Skirts", "Beachwear", "Evening-wear", "Nightwear", "Leather-wear", "Sweaters", "T-shirts"
+    "Blouses", "Dresses", "Underwear", "Skirts", "Beachwear", "Eveningwear", "Nightwear", "Leatherwear", "Sweaters", "T-shirts"
   ],
   HANDLOOMS: [
     "Jackets", "Dresses", "Blouses"
@@ -267,7 +267,7 @@ const categoryDetails = {
     "Scarves", "Jewelry", "Bags", "Belts"
   ],
   FOOTWEAR: [
-    "Sneakers", "Sandals", "Flip Flops", "Shoes", "Heels", "Boots"
+    "Sneakers", "Sandals", "Shoes", "Heels", "Boots"
   ],
   'HOME GOODS': [
     "Bedding", "Carpets", "Cushions", "Bath Mats", "Kitchen", "Towels", "Furniture", "Garden", "Lighting", "Outdoors"
