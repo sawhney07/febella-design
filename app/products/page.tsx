@@ -315,7 +315,7 @@ function Portfolio() {
       <main className="flex-grow">
         <div className="py-0">
           <div className="container mx-auto px-6">
-            <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto text-center mb-10 -mt-24">
+            <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto text-center mb-10 -mt-[100px]">
               Explore our collection of styling projects and fashion transformations.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -325,7 +325,7 @@ function Portfolio() {
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full text-sm font-medium tracking-[0.2em] transition-colors duration-300 ${
+                  className={`px-4 py-2 rounded-full text-xs font-medium tracking-[0.2em] transition-colors duration-300 ${
                     selectedCategory === category
                       ? 'bg-[#3C3A36] text-[#F5F0E6]'
                       : 'bg-[#E5DFD3] text-[#3C3A36] hover:bg-[#3C3A36]/10'
@@ -407,31 +407,25 @@ export default function Products() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36] -mb-16"
+          className="h-[100vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36] mb-0"
         >
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#E5DFD3]">
+          <div className="container mx-auto px-6 text-center ">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#E5DFD3] mt-[140px] lg:mt-[25vh] ">
               OUR PRODUCT RANGE
             </h1>
             <p className="text-lg md:text-xl text-[#E5DFD3]/80 max-w-3xl mx-auto leading-relaxed">
               Transform your style with our professional fashion services. Each service is tailored to meet your unique needs and preferences.
             </p>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36]"
-        >
-          <Image
+            <Image
             src={'/images/products2.png'}
             alt={"productlist"}
-            width={1000}
+            width={1200}
             height={1000}
-            className="object-cover rounded-lg mb-20 mx-auto mt-2"
-          />
+            className="object-cover rounded-lg mb-20 mx-auto lg:mt-[12vh]"
+            />
+            </div>
         </motion.div>
+
 
         <div className="py-20">
           <div className="container mx-auto px-6">

@@ -65,10 +65,10 @@ function HeroSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#E5DFD3]"
+      className="h-[40vh] min-h-[335px] lg:min-h-[375px] flex items-center justify-center bg-[#E5DFD3]"
     >
       <div className="container mx-auto px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36]">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36] mt-[90px] lg:mt-[100px] ">
           OUR STORY
         </h1>
         <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto leading-relaxed">
@@ -85,7 +85,7 @@ function StorySection() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="py-20"
+      className="py-2 lg:py-10 mb-14"
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
@@ -99,7 +99,7 @@ function StorySection() {
               />
             </div>
             <div className="space-y-6">
-              <h1 className="text-2xl md:text-4xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36]">
+              <h1 className="text-3xl md:text-4xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36] mt-6 lg:mt-0">
                 WHO WE ARE
               </h1>
               {/* <h2 className="text-2xl font-semibold tracking-[0.2em] text-[#3C3A36]">
@@ -191,11 +191,11 @@ function TeamSection() {
               {/* <h2 className="text-2xl font-semibold tracking-[0.2em] text-[#3C3A36]">
                 CRAFTING CONFIDENCE THROUGH STYLE
               </h2> */}
-              <h3 className="text-2xl md:text-3xl font-bold tracking-[0.2em] text-[#3C3A36]">
+              {/* <h3 className="text-2xl md:text-3xl font-bold tracking-[0.2em] text-[#3C3A36]">
                AMIT SAWHNEY
-              </h3>
+              </h3> */}
 
-              <h3 className="text-xl md:text-xl font-sans tracking-[0.2em] text-[#3C3A36]">
+              <h3 className="text-xl md:text-xl font-bold tracking-[0.2em] text-[#3C3A36]">
                FOUNDER & CEO
               </h3>
 
