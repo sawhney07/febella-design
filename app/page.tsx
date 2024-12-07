@@ -122,9 +122,8 @@ function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-[#3C3A36]/80 max-w-3xl mx-auto leading-relaxed"
         >
-
-            Bespoke fashion consulting and personal styling services tailored to your unique aesthetic, 
-            Febella Design is your trusted partner in crafting innovative and sustainable design solutions for the modern world.
+          Founded in 2024, Febella Design is dedicated to providing elegant womenswear, sophisticated menswear, 
+          vibrant kidswear, accessories, footwear, home textiles, and hard goods.
 
         </motion.p>
         <motion.div
@@ -248,12 +247,18 @@ function VisionSection() {
           />
         <div className="max-w-4xl mx-auto space-y-8">
           <p className="text-xl text-[#F5F0E6]/90 leading-relaxed">
-            At Febella Design, we envision a world where every individual feels confident and empowered through their personal style. 
-            Our mission is to transform the way people approach fashion, making it an authentic expression of their unique identity.
+              At Febella Design, we combine creativity with functionality to offer innovative and
+              sustainable design solutions. Our services include comprehensive design, sourcing, and
+              expert support in merchandising, fabrics, technology, and quality assurance. 
+          </p>
+          <p className="text-lg text-[#F5F0E6]/90 leading-relaxed">
+              We are dedicated to delivering high-quality, fashionable products that meet our 
+              clients&apos; needs, all while maintaining competitive pricing and eco-friendly practices.
+            
           </p>
           <p className="text-lg text-[#F5F0E6]/80 leading-relaxed">
-            We believe that style is more than just clothing &ndash; it&apos;s a powerful form of self-expression and confidence. 
-            Through our expert guidance and personalized approach, we help our clients discover and embrace their authentic style.
+              With its diverse range, Febella Design caters to individuals and families alike, offering stylish, 
+              comfortable, and sustainable fashion for every occasion.
           </p>
         </div>
       </div>
@@ -349,13 +354,18 @@ function FinalCTASection() {
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold tracking-[0.2em] mb-8">
-            BEGIN YOUR STYLE JOURNEY
+          <h2 className="text-3xl font-semibold tracking-[0.2em] mb-8 -mt-12">
+            BRING YOUR VISION TO LIFE TODAY!
           </h2>
           <div className="space-y-8">
             <p className="text-xl text-[#F5F0E6]/90 leading-relaxed">
-              Your personal style evolution starts here. Let us help you discover and express 
+              Let us help you discover and express 
               your unique aesthetic through expert guidance and personalized solutions.
+            </p>
+            <p className="text-lg text-[#F5F0E6]/80 leading-relaxed">
+              Our mission is to create stylish, high-quality pieces that are kind to the environment. We
+              manufacture products with the utmost care, ensuring they meet both customer satisfaction
+              and sustainability standards.
             </p>
             <p className="text-lg text-[#F5F0E6]/80 leading-relaxed">
               Join our growing community of confident individuals who have transformed their 

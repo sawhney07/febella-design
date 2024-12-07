@@ -5,31 +5,11 @@ import Image from 'next/image'
 import { Footer } from '../components/Footer'
 import Link from 'next/link'
 
-// const teamMembers = [
-//   {
-//     name: 'Amit Sawhney',
-//     role: 'Founder & CEO',
-//     image: '/images/portfolio1.png',
-//     description: 'With over 15 years of experience in fashion and styling, Sarah leads our creative vision and personalized styling approach.'
-//   },
-//   // {
-//   //   name: 'Michael Chen',
-//   //   role: 'Senior Style Consultant',
-//   //   image: '/images/portfolio2.png',
-//   //   description: 'Specializing in wardrobe curation and personal branding, Michael brings expertise in contemporary fashion trends.'
-//   // },
-//   // {
-//   //   name: 'Emma Rodriguez',
-//   //   role: 'Image Consultant',
-//   //   image: '/images/portfolio3.png',
-//   //   description: "Emma's background in professional image consulting helps clients develop their unique style identity."
-//   // }
-// ]
 
 const values = [
   {
     title: 'AUTHENTICITY',
-    description: 'We believe in celebrating individual style and helping each client express their true self.'
+    description: 'We believe in celebrating individual preferences and helping each client express their true self.'
   },
   {
     title: 'EXCELLENCE',
@@ -37,7 +17,7 @@ const values = [
   },
   {
     title: 'INNOVATION',
-    description: 'We stay ahead of trends while creating timeless, sustainable style solutions.'
+    description: 'We stay ahead of trends while creating timeless, sustainable garment solutions.'
   },
   {
     title: 'EMPOWERMENT',
@@ -72,7 +52,7 @@ function HeroSection() {
           OUR STORY
         </h1>
         <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto leading-relaxed">
-          Discover the passion and expertise behind Febella Design&apos;s commitment to transforming personal style.
+          Discover the passion and expertise behind Febella Design&apos;s commitment to cater to fashion needs for every occasion.
         </p>
       </div>
     </motion.section>
@@ -90,15 +70,15 @@ function StorySection() {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px]">
+            <div className="relative aspect h-[350px] lg:h-[500px] lg:w-[500px]">
               <Image
                 src="/images/logo.jpg"
                 alt="Febella Design Story"
                 fill
-                className="object-cover rounded-lg mt-10"
+                className="object-cover rounded-lg mt-10 lg:ml-[-100px]"
               />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 mx-auto">
               <h1 className="text-3xl md:text-4xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36] mt-6 lg:mt-0">
                 WHO WE ARE
               </h1>
@@ -106,21 +86,22 @@ function StorySection() {
                 CRAFTING CONFIDENCE THROUGH STYLE
               </h2> */}
               <p className="text-[#3C3A36]/80 leading-relaxed">
-                Founded in 2024, Febella Design emerged from a vision to transform how individuals approach personal style. 
-                We believe that true style is an expression of individuality, and our mission is to help each client 
-                discover and embrace their unique aesthetic.
+                Founded by visionary CEO Mr. Amit Sawhney, Febella Design bridges the gap between high quality
+                garment production and the global demand for exceptional products. We are
+                commited to working with fashion companies worldwide, offering low margins and flexible
+                minimum order quantities (MOQs) to meet the diverse needs of our clients.
               </p>
               <p className="text-[#3C3A36]/80 leading-relaxed">
-                Our end-to-end solutions include design and sourcing services, supported by a 
-                highly skilled team with extensive expertise in design, merchandising, fabric 
-                technology, and quality assurance.
+                Febella Design offers a wide variety of products suitable for any occasion, from casual
+                daytime looks to evening elegance. Our collections include beachwear, evening wear, leather
+                items, sweaters, and more. Our menswear and womenswear feature timeless styles with a
+                modern twist, while our accessories range from scarves and jewelry to bags, belts, and
+                footwear. 
               </p>
               <p className="text-[#3C3A36]/80 leading-relaxed">
-                Our solid relationships with manufacturers and quality suppliers
-                ensures that we maintain high production standards keeping in-mind
-                the competitive product prices.           
-                We have a strong ability to work with any of the worlds
-                fashion companies with low margins and flexible MOQs.
+                In addition to fashion, we provide a full range of home textiles, including bedding,
+                carpets, cushions, bath mats, towels, and more. Our hard goods selection is another
+                highlight, making Febella Design a true one-stop shop for all your needs.
               </p>
             </div>
           </div>
@@ -209,11 +190,10 @@ function TeamSection() {
                   fulfil the needs of customer in every aspect from design to store.
               </p>
               <p className="text-[#3C3A36]/80 leading-relaxed">
-                Our team is dedicated to providing personalized services, offering
-                expert guidance on everything from fabric sourcing to production
-                management. We pride ourselves on our ability to navigate the
-                complexities of the garment industry, helping you bring your vision to
-                life with efficiency and precision.
+                Our efficient process begins with understanding your unique
+                requirements, developing prototypes tailored to your specifications, and streamlining the
+                order process with our trusted factories. We maintain rigorous quality control with
+                continuous inspections to ensure every product is crafted to perfection.
               </p>
             </div>
             
@@ -227,11 +207,12 @@ function TeamSection() {
       <section className="bg-[#3C3A36] py-32 text-[#F5F0E6]">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              <div className="relative aspect-[3/4] bg-[#F5F0E6] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative aspect-2/3 bg-[#F5F0E6] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/images/portfolio7.png"
                   alt="Fashion Styling Process"
-                  fill
+                  width={600}
+                  height={1300}
                   className="object-cover"
                 />
               </div>
@@ -243,6 +224,11 @@ function TeamSection() {
                 <p className="text-lg text-[#F5F0E6]/80 leading-relaxed">
                   Each project is a collaborative journey, where we combine our expertise with your individual preferences to create looks that not only look exceptional but feel authentically you.
                 </p>
+                <p className="text-lg text-[#F5F0E6]/80 leading-relaxed">
+                  We are dedicated to delivering high-quality, fashionable products that meet 
+                  our clients&apos; needs, all while maintaining competitive pricing and eco-friendly practices.
+                </p>
+
                 <motion.div
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}

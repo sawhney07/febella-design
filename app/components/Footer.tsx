@@ -23,7 +23,7 @@ export function Footer() {
               className="w-16 h-16 mb-4"
             />
             <p className="text-sm text-[#F5F0E6]/70">
-              Elevating personal style through bespoke fashion consulting and styling services.
+              Febella Design | A True One-Stop Shop for all your Design needs.
             </p>
           </div>
           <div>

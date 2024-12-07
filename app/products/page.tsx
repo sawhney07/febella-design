@@ -7,7 +7,6 @@ import Link from 'next/link'
 import { Footer } from '../components/Footer'
 
 
-
 interface PortfolioItem {
   id: number;
   title?: string;
@@ -316,7 +315,8 @@ function Portfolio() {
         <div className="py-0">
           <div className="container mx-auto px-6">
             <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto text-center mb-10 -mt-[100px]">
-              Explore our collection of styling projects and fashion transformations.
+              Explore a wide variety of products suitable for any occasion, from casual
+              daytime looks to evening elegance.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
@@ -362,24 +362,23 @@ function Portfolio() {
               <div className="w-full lg:w-1/2 lg:pl-12 mx-auto">
                 <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
                   <h2 className="text-3xl font-semibold tracking-[0.2em] mb-8 text-[#3C3A36]">
-                    CRAFTING YOUR STYLE STORY
+                    CRAFTING YOUR DESIGN 
                   </h2>
                   <div className="space-y-8">
                     <p className="text-xl text-[#3C3A36]/90 leading-relaxed">
-                      Every portfolio piece represents a unique journey of style transformation. 
                       We take pride in creating personalized experiences that reflect the individual essence of each client.
                     </p>
                     <p className="text-lg text-[#3C3A36]/80 leading-relaxed">
                       Our commitment to excellence and attention to detail ensures that each styling project 
-                      not only meets but exceeds expectations, creating lasting confidence through personal style.
+                      not only meets but exceeds expectations, creating lasting confidence through personalized designs.
                     </p>
                     <motion.div
                       whileHover={{ y: -2 }}
                       whileTap={{ y: 0 }}
-                      className="pt-4"
+                      className="pt-2"
                     >
                       <p className="text-lg text-[#3C3A36]/80 mb-8">
-                        Book a consultation today and begin your style journey with our expert team.
+                        Bring your vision to life with efficiency and precision with our expert team. Book a consultation today!.
                       </p>
                       <Link
                         href="/contact"
@@ -410,18 +409,22 @@ export default function Products() {
           className="h-[100vh] min-h-[400px] flex items-center justify-center bg-[#3c3a36] mb-0"
         >
           <div className="container mx-auto px-6 text-center ">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#E5DFD3] mt-[140px] lg:mt-[25vh] ">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#E5DFD3] mt-[130px] lg:mt-[21vh] ">
               OUR PRODUCT RANGE
             </h1>
             <p className="text-lg md:text-xl text-[#E5DFD3]/80 max-w-3xl mx-auto leading-relaxed">
-              Transform your style with our professional fashion services. Each service is tailored to meet your unique needs and preferences.
+              Febella Design is dedicated to providing elegant womenswear, sophisticated menswear, vibrant kidswear, accessories,
+              footwear, home textiles, and hard goods. 
+            </p>
+            <p className="text-lg md:text-xl text-[#E5DFD3]/80 max-w-3xl mx-auto leading-relaxed mt-6">
+              Each service is tailored to meet your unique needs and preferences.
             </p>
             <Image
             src={'/images/products2.png'}
             alt={"productlist"}
             width={1200}
             height={1000}
-            className="object-cover rounded-lg mb-20 mx-auto lg:mt-[12vh]"
+            className="object-cover rounded-lg mb-20 mx-auto mt-[6vh] lg:mt-[8vh]"
             />
             </div>
         </motion.div>

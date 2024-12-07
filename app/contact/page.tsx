@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Footer } from '../components/Footer'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
+
 interface FormData {
   name: string;
   email: string;
@@ -257,11 +258,15 @@ Date: ${new Date().toLocaleString()}
           className="h-[50vh] min-h-[400px] flex items-center justify-center bg-[#E5DFD3]"
         >
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36]">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-[0.2em] mb-8 text-[#3C3A36] mt-28">
               CONTACT US
             </h1>
             <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto leading-relaxed">
-              Begin your style journey with a personal consultation. We&apos;ll be in touch within 24 hours.
+              Bring your ideas to life with expertise and attention to detail. Connect with our team today and schedule a consultation to get started!
+            </p>
+
+            <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mt-6 mx-auto leading-relaxed">
+              We&apos;ll be in touch within 24 hours.
             </p>
           </div>
         </motion.div>
@@ -309,7 +314,7 @@ Date: ${new Date().toLocaleString()}
                   onBlur={handleBlur}
                   required
                   rows={6}
-                  placeholder="Tell us about your styling needs or any questions you have..."
+                  placeholder="Tell us any questions or enquiries you have...."
                   className={`w-full px-4 py-3 bg-[#F5F0E6] border-2 ${
                     formErrors.message ? 'border-red-500' : 'border-[#3C3A36]/10'
                   } rounded-lg focus:border-[#3C3A36]/30 outline-none transition-colors duration-300 resize-none placeholder-[#3C3A36]/40`}

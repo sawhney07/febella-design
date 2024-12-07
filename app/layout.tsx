@@ -4,7 +4,7 @@ import Navigation from './navigation/page'
 
 export const metadata: Metadata = {
   title: 'Febella Design',
-  description: 'Bespoke fashion consulting and personal styling services',
+  description: 'Fashion consulting and personal styling services',
 }
 
 export default function RootLayout({
@@ -14,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Febella Design</title>
+      </head>
       <body className="bg-[#F5F0E6]">
         <Navigation />
         {children}
