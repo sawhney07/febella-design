@@ -5,10 +5,11 @@ import Navigation from './navigation/page'
 export const metadata: Metadata = {
   title: 'Febella Design',
   description: 'Fashion consulting and personal styling services',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
   openGraph: {
     title: 'Febella Design',
     description: 'Fashion consulting and personal styling services',
-    url: 'https://febelladesign.com',
+    url: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
     siteName: 'Febella Design',
     images: [
       {

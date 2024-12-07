@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, ChangeEvent, FormEvent, useCallback } from 'react'
+import { useState, ChangeEvent, FormEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Footer } from '../components/Footer'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
-import { db } from '../firebase/firebaseConfig';
+import { db } from '../firebase/firebaseconfig'
 import { collection, addDoc } from 'firebase/firestore';
 import emailjs from "emailjs-com";
 
@@ -189,19 +189,16 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-
-      /// Send email using EmailJS
-      const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-      const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-      const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
-
-      // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target.value ,USER_ID)
       const emailParams = {
         from_email: formData.email,
         from_name: formData.name,
         message: formData.message, 
         time_stamp: new Date(),
       };
+
+      const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "default_service_id";
+      const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "default_template_id";
+      const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID || "default_user_id";
 
       emailjs
         .send(SERVICE_ID, TEMPLATE_ID, emailParams, USER_ID)
@@ -232,7 +229,7 @@ export default function Contact() {
         message: '',
       });
     } catch (err) {
-      console.error('Error saving message:', err);
+      console.error('Error sending message:', err);
 
       setSubmitStatus({
         show: true,

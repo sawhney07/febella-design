@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
-import emailjs from "emailjs-com";
+
 
 // Replace these placeholders with your Firebase project credentials
 const firebaseConfig = {
