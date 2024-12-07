@@ -5,6 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Footer } from '../components/Footer'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
+import { db } from '../firebase/firebaseConfig';
+import { collection, addDoc } from 'firebase/firestore';
+import emailjs from "emailjs-com";
+
 
 interface FormData {
   name: string;
@@ -157,80 +161,91 @@ export default function Contact() {
     }
   }
 
-  const saveToFile = useCallback((data: FormData) => {
-    const text = `
-Name: ${data.name}
-Email: ${data.email}
-Message: ${data.message}
-Date: ${new Date().toLocaleString()}
-    `.trim();
-
-    const blob = new Blob([text], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `contact_form_${Date.now()}.txt`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    
-    const errors: FormErrors = {}
-    
+    e.preventDefault();
+
+    const errors: FormErrors = {};
+
     if (!formData.email.trim()) {
-      errors.email = 'Email cannot be empty'
+      errors.email = 'Email cannot be empty';
     } else if (!validators.email(formData.email)) {
-      errors.email = 'Please enter a valid email address'
+      errors.email = 'Please enter a valid email address';
     }
-    
+
     if (!validators.name(formData.name)) {
-      errors.name = 'Name cannot be empty'
+      errors.name = 'Name cannot be empty';
     }
-    
+
     if (!validators.message(formData.message)) {
-      errors.message = 'Message cannot be empty'
+      errors.message = 'Message cannot be empty';
     }
-    
+
     if (Object.keys(errors).length > 0) {
-      setFormErrors(errors)
-      return
+      setFormErrors(errors);
+      return;
     }
 
     setIsSubmitting(true);
 
     try {
-      await saveToFile(formData);
+
+      /// Send email using EmailJS
+      const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+
+      // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target.value ,USER_ID)
+      const emailParams = {
+        from_email: formData.email,
+        from_name: formData.name,
+        message: formData.message, 
+        time_stamp: new Date(),
+      };
+
+      emailjs
+        .send(SERVICE_ID, TEMPLATE_ID, emailParams, USER_ID)
+        .then(() => {
+          console.log("Email sent successfully!");
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+        });
       
+      // Save to Firestore
+      await addDoc(collection(db, 'messages'), {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        time: new Date(),
+      });
+
       setSubmitStatus({
         show: true,
         isSuccess: true,
-        message: 'Message sent successfully!'
+        message: 'Message sent successfully!',
       });
 
       setFormData({
         name: '',
         email: '',
-        message: ''
+        message: '',
       });
-
     } catch (err) {
       console.error('Error saving message:', err);
+
       setSubmitStatus({
         show: true,
         isSuccess: false,
-        message: 'Failed to send message. Please try again.'
+        message: 'Failed to send message. Please try again.',
       });
     } finally {
       setIsSubmitting(false);
       setTimeout(() => {
-        setSubmitStatus(prev => ({ ...prev, show: false }));
+        setSubmitStatus((prev) => ({ ...prev, show: false }));
       }, 5000);
     }
-  }
+};
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
