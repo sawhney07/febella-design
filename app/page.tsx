@@ -81,7 +81,7 @@ function HomePage() {
       <HeroSection />
       <WhatWeDoSection />
       <ProcessSection />
-      <VisionSection />
+      <ProductRangeSection />
       <WhyPartnerWithUsSection />
       <FinalCTASection />
     </>
@@ -144,7 +144,51 @@ function HeroSection() {
   )
 }
 
+function CategoryDiagram2() {
+  const categories = [
+    { name: 'Design' },
+    { name: 'Order Management' },
+    { name: 'Product Development' },
+    { name: 'Cost Negotiation' },
+    { name: 'Sourcing' },
+    { name: 'Compliance' },
+    { name: 'Quality Assurance' },
+    { name: 'Logistics' },
+  ];
+
+  return (
+    <div className="w-full p-2" style={{ backgroundColor: "#f5f0e6", color: "#3f444e" }}>
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-y-6 lg:gap-x-0">
+          {categories.map((category, index) => (
+            <div key={index} className="flex flex-col items-center space-y-4">
+              <div className="rounded-full p-6 bg-[#4c4a46] flex flex-col items-center justify-center w-[175px] h-[175px] lg:w-[260px] lg:h-[260px] my-auto" 
+                style={{ color: "#f5f0e6" }}>
+                <div className="flex items-center justify-center h-full text-center mt-2 lg:mt-3 font-bold text-lg lg:text-xl uppercase my-auto">
+                  {category.name}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
 function WhatWeDoSection() {
+    const categories2 = [
+      { name: 'Design' },
+      { name: 'Order Management' },
+      { name: 'Product Development' },
+      { name: 'Negotiations' },
+      { name: 'Sourcing' },
+      { name: 'Compliance' },
+      { name: 'Quality Assurance' },
+      { name: 'Logistics' },
+    ];
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -154,13 +198,25 @@ function WhatWeDoSection() {
     >
       <div className="container mx-auto px-6">
         <h2 className="text-5xl font-semibold tracking-[0.2em] text-center mb-12">WHAT WE DO</h2>
-          <Image
+          {/* <Image
                 src="/images/what_we_do.png"
                 alt="Febella Design Story"
                 width={1000}
                 height={1000}
                 className="object-cover rounded-lg mx-auto my-auto"
-              />
+              /> */}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+          {categories2.map((item, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.2 }}
+              className="bg-[#E5DFD3] rounded-lg shadow-md md:px-4 md:py-18 lg:px-4 py-14 lg:py-20 text-center items-center justify-center"
+            >
+              <h2 className="text-[16px] lg:text-2xl tracking-[0.1em] font-normal text-[#4f4c46]">{item.name}</h2>
+            </motion.div>
+          ))}
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* {products.map((product, index) => (
             <ProductCard key={index} {...product} />
@@ -228,7 +284,7 @@ function ProcessSection() {
   )
 }
 
-function VisionSection() {
+function ProductRangeSection() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -276,7 +332,7 @@ function WhyPartnerWithUsSection() {
     >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold tracking-[0.2em] text-center mb-12 text-[#3C3A36]">WHY PARTNER WITH US?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {newsItems.map((item, index) => (
             <motion.div
               key={index}
@@ -292,51 +348,31 @@ function WhyPartnerWithUsSection() {
         <h1 className="text-2xl lg:text-3xl font-medium tracking-[0.2em] text-center mt-16 -mb-4 text-[#3C3A36]">
           WE DELIVER LASTING BENEFITS TO BOTH BUSINESSES AND THE ENVIRONMENT THROUGH SUSTAINABLE SUPPLY CHAIN PRACTICES.
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 mt-16 lg:mt-0">
-          <motion.div
-            key={1}
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.2 }}
-            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[180px] lg:h-[220px] lg:mt-[75px]"
-          >
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-10 mt-16 lg:mt-16">
             <Image
               src="/images/eco1.png"
               alt="Febella Design Story"
               width={600}
               height={400}
-              className="object-cover rounded-[40px] mx-auto my-auto" // Adjusted margin-top to bring the image up
+              className="object-cover mx-auto my-auto" // Adjusted margin-top to bring the image up
             />
-          </motion.div>
-          
-          <motion.div
-            key={2}
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.2 }}
-            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[160px] lg:h-[210px] lg:mt-[90px]"
-          >
+        
             <Image
               src="/images/eco2.png"
               alt="Febella Design Story"
               width={600}
               height={400}
-              className="object-cover rounded-[40px] mx-auto mt-[-20px]" // Adjusted margin-top
+              className="object-cover mx-auto my-auto" // Adjusted margin-top
             />
-          </motion.div>
-          
-          <motion.div
-            key={3}
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.2 }}
-            className="bg-[#F5F0E6] rounded-[40px] shadow-md w-full h-[155px] lg:h-[200px] lg:mt-[95px]"
-          >
+
             <Image
               src="/images/eco3.png"
               alt="Febella Design Story"
               width={600}
               height={400}
-              className="object-cover rounded-[40px] mx-auto mt-[-20px]" // Adjusted margin-top
+              className="object-cover mx-auto my-auto" // Adjusted margin-top
             />
-          </motion.div>
+
         </div>
 
       </div>
