@@ -154,11 +154,10 @@ function TeamSection() {
       className="py-20 bg"
     >
       <div className="container mx-auto px-6">
-                      <h1 className="text-2xl md:text-5xl font-bold tracking-[0.2em] mb-16 text-[#3C3A36] mx-auto text-center">
-                MANAGEMENT
-              </h1>
+        <h1 className="text-2xl md:text-5xl font-bold tracking-[0.2em] mb-16 text-[#3C3A36] mx-auto text-center">
+            MANAGEMENT
+        </h1>
         <div className="max-w-4xl mx-auto">
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px]">
               <Image
@@ -169,17 +168,9 @@ function TeamSection() {
               />
             </div>
             <div className="space-y-3">
-              {/* <h2 className="text-2xl font-semibold tracking-[0.2em] text-[#3C3A36]">
-                CRAFTING CONFIDENCE THROUGH STYLE
-              </h2> */}
-              {/* <h3 className="text-2xl md:text-3xl font-bold tracking-[0.2em] text-[#3C3A36]">
-               AMIT SAWHNEY
-              </h3> */}
-
               <h3 className="text-xl md:text-xl font-bold tracking-[0.2em] text-[#3C3A36]">
                FOUNDER & CEO
               </h3>
-
               <p className="text-[#3C3A36]/80 leading-relaxed">
                 Amit Sawhney has 30+ years experience in understanding the customer
                 requirements. His vision is to bridge the gap between high quality
@@ -196,10 +187,8 @@ function TeamSection() {
                 continuous inspections to ensure every product is crafted to perfection.
               </p>
             </div>
-            
           </div>
-        </div>
-        
+        </div>  
       </div>
       
     </motion.section>

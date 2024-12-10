@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Footer } from './components/Footer'
 
-const newsItems = [
+const whyPartnerWithUsItems = [
   { 
     title: 'One-Stop Shop', 
     description: 'We offer services at every stage of the production process, from design to delivery. Our expertise spans textiles, footwear, and home goods, with experience in managing multi-channel business requirements.' 
@@ -24,12 +24,6 @@ const newsItems = [
   },
 ]
 
-// const products = [
-//   { name: 'PERSONAL STYLING', image: '/images/1.png' },
-//   { name: 'WARDROBE CURATION', image: '/images/2.png' },
-//   { name: 'IMAGE CONSULTING', image: '/images/3.png' },
-//   { name: 'FASHION WORKSHOPS', image: '/images/4.png' },
-// ]
 
 const steps = [
   { 
@@ -144,39 +138,6 @@ function HeroSection() {
   )
 }
 
-function CategoryDiagram2() {
-  const categories = [
-    { name: 'Design' },
-    { name: 'Order Management' },
-    { name: 'Product Development' },
-    { name: 'Cost Negotiation' },
-    { name: 'Sourcing' },
-    { name: 'Compliance' },
-    { name: 'Quality Assurance' },
-    { name: 'Logistics' },
-  ];
-
-  return (
-    <div className="w-full p-2" style={{ backgroundColor: "#f5f0e6", color: "#3f444e" }}>
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-y-6 lg:gap-x-0">
-          {categories.map((category, index) => (
-            <div key={index} className="flex flex-col items-center space-y-4">
-              <div className="rounded-full p-6 bg-[#4c4a46] flex flex-col items-center justify-center w-[175px] h-[175px] lg:w-[260px] lg:h-[260px] my-auto" 
-                style={{ color: "#f5f0e6" }}>
-                <div className="flex items-center justify-center h-full text-center mt-2 lg:mt-3 font-bold text-lg lg:text-xl uppercase my-auto">
-                  {category.name}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-
 
 function WhatWeDoSection() {
     const categories2 = [
@@ -198,14 +159,7 @@ function WhatWeDoSection() {
     >
       <div className="container mx-auto px-6">
         <h2 className="text-5xl font-semibold tracking-[0.2em] text-center mb-12">WHAT WE DO</h2>
-          {/* <Image
-                src="/images/what_we_do.png"
-                alt="Febella Design Story"
-                width={1000}
-                height={1000}
-                className="object-cover rounded-lg mx-auto my-auto"
-              /> */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
           {categories2.map((item, index) => (
             <motion.div
               key={index}
@@ -217,35 +171,11 @@ function WhatWeDoSection() {
             </motion.div>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* {products.map((product, index) => (
-            <ProductCard key={index} {...product} />
-          ))} */}
-        </div>
       </div>
     </motion.section>
   )
 }
 
-// function ProductCard({ name, image }: { name: string; image: string }) {
-//   return (
-//     <motion.div
-//       whileHover={{ y: -5 }}
-//       transition={{ duration: 0.2 }}
-//       className="group bg-[#E5DFD3] rounded-lg overflow-hidden shadow-md"
-//     >
-//       <div className="relative aspect-[3/4] mb-4">
-//         <Image
-//           src={image}
-//           alt={name}
-//           fill
-//           className="object-cover"
-//         />
-//       </div>
-//       <h3 className="text-lg tracking-[0.2em] text-center p-4 font-medium">{name}</h3>
-//     </motion.div>
-//   )
-// }
 
 function ProcessSection() {
   return (
@@ -257,14 +187,6 @@ function ProcessSection() {
     >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl lg:text-4xl font-semibold tracking-[0.2em] text-center mb-12 -mt-10 text-[#3C3A36]">FROM IDEAS TO REALITY</h2>
-        {/* <Image
-                src="/images/process.png"
-                alt="Febella Design Story"
-                width={1400}
-                height={1200}
-                className="object-cover rounded-lg mx-auto my-auto mb-20"
-          /> */}
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-x-12 gap-y-8">
           {steps.map((step, index) => (
             <motion.div
@@ -294,13 +216,13 @@ function ProductRangeSection() {
     >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold tracking-[0.2em] mb-8">OUR PRODUCT GROUPS</h2>
-                <Image
-                src="/images/test.png"
-                alt="Febella Design Story"
-                width={1000}
-                height={800}
-                className="object-cover rounded-lg mx-auto my-auto mb-20"
-          />
+        <Image
+          src="/images/test.png"
+          alt="Febella Design Story"
+          width={1000}
+          height={800}
+          className="object-cover rounded-lg mx-auto my-auto mb-20"
+        />
         <div className="max-w-4xl mx-auto space-y-8">
           <p className="text-xl text-[#F5F0E6]/90 leading-relaxed">
               At Febella Design, we combine creativity with functionality to offer innovative and
@@ -333,7 +255,7 @@ function WhyPartnerWithUsSection() {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold tracking-[0.2em] text-center mb-12 text-[#3C3A36]">WHY PARTNER WITH US?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {newsItems.map((item, index) => (
+          {whyPartnerWithUsItems.map((item, index) => (
             <motion.div
               key={index}
               whileHover={{ y: -5 }}
@@ -349,32 +271,30 @@ function WhyPartnerWithUsSection() {
           WE DELIVER LASTING BENEFITS TO BOTH BUSINESSES AND THE ENVIRONMENT THROUGH SUSTAINABLE SUPPLY CHAIN PRACTICES.
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-10 mt-16 lg:mt-16">
-            <Image
-              src="/images/eco1.png"
-              alt="Febella Design Story"
-              width={600}
-              height={400}
-              className="object-cover mx-auto my-auto" // Adjusted margin-top to bring the image up
-            />
+          <Image
+            src="/images/eco1.png"
+            alt="Febella Design Story"
+            width={600}
+            height={400}
+            className="object-cover mx-auto my-auto" // Adjusted margin-top to bring the image up
+          />
         
-            <Image
-              src="/images/eco2.png"
-              alt="Febella Design Story"
-              width={600}
-              height={400}
-              className="object-cover mx-auto my-auto" // Adjusted margin-top
-            />
+          <Image
+            src="/images/eco2.png"
+            alt="Febella Design Story"
+            width={600}
+            height={400}
+            className="object-cover mx-auto my-auto" // Adjusted margin-top
+          />
 
-            <Image
-              src="/images/eco3.png"
-              alt="Febella Design Story"
-              width={600}
-              height={400}
-              className="object-cover mx-auto my-auto" // Adjusted margin-top
-            />
-
+          <Image
+            src="/images/eco3.png"
+            alt="Febella Design Story"
+            width={600}
+            height={400}
+            className="object-cover mx-auto my-auto" // Adjusted margin-top
+          />
         </div>
-
       </div>
     </motion.section>
   )
