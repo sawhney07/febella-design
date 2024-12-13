@@ -311,7 +311,7 @@ function Portfolio() {
     <div className="min-h-screen flex flex-col bg-[#F5F0E6] text-[#3C3A36]">
       <main className="flex-grow">
         <div className="py-0">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-6 mt-36">
             <p className="text-lg md:text-xl text-[#3C3A36]/80 max-w-3xl mx-auto text-center mb-10 -mt-[100px]">
               Explore a wide variety of products suitable for any occasion, from casual
               daytime looks to evening elegance.
