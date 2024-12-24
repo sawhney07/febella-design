@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Facebook, Instagram, Linkedin } from 'lucide-react'
+import { Linkedin } from 'lucide-react'
 
 const navigation = [
   { name: 'HOME', href: '/' },
@@ -51,12 +51,12 @@ export function Footer() {
               <a href="https://www.linkedin.com/company/febelladesign/" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
                 <Linkedin size={24} />
               </a>
-              <a href="#" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
+              {/* <a href="#" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
                 <Facebook size={24} />
               </a>
               <a href="#" className="text-[#F5F0E6] hover:text-[#F5F0E6]/70 transition-colors duration-300">
                 <Instagram size={24} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
